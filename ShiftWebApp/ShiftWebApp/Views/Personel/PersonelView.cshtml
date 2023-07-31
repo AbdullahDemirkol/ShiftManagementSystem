@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Seçilen Personel Bilgileri";
+}
+@model Personel
+<div class="widget-title">
+    <a href="/Personel/Personels"> <i class="las la-angle-left"></i></a>
+    <h4 style="text-align:center;">Seçilen Personel Bilgisi</h4>
+    <div></div>
+</div>
+
+<div class="widget-content">
+    <div class="sidebar-widget company-widget">
+        <div class="widget-content">
+            <ul class="company-info mt-0">
+                <li>Personelin Adı: <span>@Model.FirstName</span></li>
+                <li>Personelin Soyadı: <span>@Model.LastName</span></li>
+                <li>Personelin Kullanıcı Adı: <span>@Model.UserName</span></li>
+                <li>Personelin Telefon Numarası: <span>@Model.Phone</span></li>
+                <li>Personelin Email Adresi: <span>@Model.Email</span></li>
+                <li>Personelin Yetki Düzeyi: <span>@Model.Title.Name</span></li>
+                <li>Personel Aktif/Pasif: <span>@(Model.IsActive ? "Aktif" : "Pasif")</span></li>
+                <li>Social media:
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="btn-box"><a href="/Personel/UpdatePersonel?personelId=@Model.Id" class="theme-btn btn-style-three">Personel Bilgisini Güncelle</a></div>
+        </div>
+    </div>
+</div>

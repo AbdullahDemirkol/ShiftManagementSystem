@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ShiftWebApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/bootstrap.css"  />
+    <link rel="stylesheet" href="~/css/style.css"  />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ShiftWebApp.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    
+    <link href="https://kendo.cdn.telerik.com/themes/6.6.0/bootstrap/bootstrap-main.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://kendo.cdn.telerik.com/2023.2.718/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2023.2.718/js/jszip.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2023.2.718/js/kendo.all.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2023.2.718/js/kendo.aspnetmvc.min.js"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
+</head>
+<body>
+    <div class="page-wrapper dashboard ">
+        <div class="preloader"></div>
+        <span class="header-span"></span>
+
+        @await Html.PartialAsync("_Navbar")
+        @await Html.PartialAsync("_SideBar")
+        <section class="user-dashboard">
+            <div class="dashboard-outer">
+                <div class="applicants-widget ls-widget">
+                    <div class="text-center">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </section>
+        @await Html.PartialAsync("_Footer")
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/popper.min.js" ></script>
+    <script src="~/js/chosen.min.js" ></script>
+    <script src="~/js/bootstrap.min.js" ></script>
+    <script src="~/js/jquery-ui.min.js" ></script>
+    <script src="~/js/jquery.fancybox.js"></script>
+    @* <script src="~/js/jquery.modal.min.js"></script> *@
+    <script src="~/js/mmenu.polyfills.js"></script>
+    <script src="~/js/mmenu.js"></script>
+    <script src="~/js/appear.js"></script>
+    <script src="~/js/ScrollMagic.min.js"></script>
+    <script src="~/js/rellax.min.js"></script>
+    <script src="~/js/owl.js"></script>
+    <script src="~/js/wow.js"></script>
+    <script src="~/js/script.js"></script>
+    <script src="~/lib/kendoUI/js/kendo.all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    @await RenderSectionAsync("PersonelUpdateScripts", required: false)
+</body>
+</html>

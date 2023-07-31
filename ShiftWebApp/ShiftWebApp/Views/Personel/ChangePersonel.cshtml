@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Personel Değiştir";
+}
+@model int
+<div class="widget-title">
+    <a href="/Team/Teams"> <i class="las la-angle-left"></i></a>
+    <h4 style="text-align:center;">Seçilen Personeli Değiştir</h4>
+    <div>
+        <!-- Input -->
+        <div class="form-group col-lg-12 col-md-12">
+            @if (Model == 1)
+            {
+                <a href="/Personel/ChangePersonel?personelId=@ViewBag.RegisteredPersonel.Id&settingsId=2" class="theme-btn btn-style-one">Çalışan Gelmediyse Değiştirebilirsiniz!!!</a>
+            }
+            else if (Model == 2)
+            {
+                <a href="/Personel/ChangePersonel?personelId=@ViewBag.RegisteredPersonel.Id&settingsId=1" class="theme-btn btn-style-one">Başka Bir Takımdaki Üye ile Değiştir</a>
+
+            }
+        </div>
+    </div>
+</div>
+
+
+<div class="widget-content">
+
+    <form method="post" id="UpdateForm" class="default-form" action="/Personel/Change?firstPersonelId=@ViewBag.RegisteredPersonel.Id&settingsId=@Model">
+
+        <div class="row">
+
+            <!-- Input -->
+            <div class="form-group col-lg-6 col-md-12">
+                <label>Değiştirmek İstediğiniz Personel</label>
+                <input type="text" name="FirstName" value="@ViewBag.RegisteredPersonel.FirstName @ViewBag.RegisteredPersonel.LastName" required>
+            </div>
+
+            @if (Model == 1)
+            {
+                <!-- Input -->
+                <div class="form-group col-lg-6 col-md-12">
+                    <label>Herhangi Bir Takım Üye Olmuş Kullanıcılar</label>
+                    <select class="chosen-select" id="personelSelect" size="4">
+                        @foreach (var personel in (List<Personel>)ViewBag.PersonelsWithTeam)
+                        {
+                            <option value="@personel.Id">@personel.FirstName @personel.LastName</option>
+                        }
+                    </select>
+                </div>
+            }
+            else if (Model == 2)
+            {
+                <!-- Input -->
+                <div class="form-group col-lg-6 col-md-12">
+                    <label>Herhangi Bir Takım Üye Olmayan Kullanıcılar</label>
+                    <select class="chosen-select" id="personelSelect" size="4">
+                        @foreach (var personel in (List<Personel>)ViewBag.NonTeamPersonels)
+                        {
+                            <option value="@personel.Id">@personel.FirstName @personel.LastName</option>
+                        }
+                    </select>
+                </div>
+            }
+
+
+            <!-- Input -->
+            <div class="form-group col-lg-12 col-md-12">
+                <a onclick="checkCheckBox()" class="theme-btn btn-style-one">Vardiya Güncelle</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section PersonelUpdateScripts {
+    <script>
+        function checkCheckBox() {
+            var form = document.getElementById("UpdateForm");
+            var personelId = document.getElementById("personelSelect").value;
+            console.log(form.action);
+            form.action += "&secondPersonelId=" + personelId;
+
+            form.submit();
+
+
+        }
+    </script>
+} 

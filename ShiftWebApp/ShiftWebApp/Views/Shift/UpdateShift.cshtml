@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Vardiya Güncelle";
+}
+@model Shift
+<div class="widget-title">
+    <a href="/Shift/Shifts"> <i class="las la-angle-left"></i></a>
+    <h4 style="text-align:center;">Seçilen Vardiyayı Güncelle</h4>
+    <div></div>
+</div>
+
+
+<div class="widget-content">
+
+    <form method="post" id="UpdateForm" class="default-form" action="/Shift/Update">
+        <div class="row">
+             <div class="form-group col-lg-6 col-md-12">
+                <label>Vardiyanın Durumu</label>
+                <select class="chosen-select" id="selectedTeam"  name="TeamName" required>
+                    @foreach (var team in (List<Team>)ViewBag.Teams)
+                    {
+                         @if (ViewBag.RegisteredTeam.Id == team.Id)
+                        {
+                            <option selected value="@team.Id">@team.TeamName</option>
+                        }
+                        else
+                        {
+                            <option value="@team.Id">@team.TeamName</option>
+                        } 
+                    }
+                </select>
+            </div>
+            <input type="hidden" name="Id" value="@Model.Id" />
+            <input type="hidden" name="StartTime" value="@Model.StartTime" />
+            <input type="hidden" name="EndTime" value="@Model.EndTime" />
+            <div class="form-group col-lg-6 col-md-12">
+                <label>Vardiyanın Durumu</label>
+                <select class="chosen-select" id="selectedShifStatusType"  name="Name" required>
+                    @foreach (var shiftStatusType in (List<ShiftStatusType>)ViewBag.ShiftStatusTypes)
+                    {
+                        @if (Model.ShiftStatus.Id == shiftStatusType.Id)
+                        {
+                            <option selected value="@shiftStatusType.Id">@shiftStatusType.Name</option>
+                        }
+                        else
+                        {
+                            <option value="@shiftStatusType.Id">@shiftStatusType.Name</option>
+                        }
+                    }
+                </select>
+            </div>
+            <!-- Input -->
+            <div class="form-group col-lg-12 col-md-12">
+                <a onclick="checkCheckBox()" class="theme-btn btn-style-one">Vardiya Güncelle</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section PersonelUpdateScripts {
+    <script>
+        function checkCheckBox() {
+            var form = document.getElementById("UpdateForm");
+            var shiftStatusTypeId = document.getElementById("selectedShifStatusType").value;
+            var teamId = document.getElementById("selectedTeam").value;
+            form.action = "/Shift/Update?shiftStatusTypeId=" + shiftStatusTypeId + "&teamId=" + teamId + "&shiftTypeId=" + @Model.ShiftType.Id;
+            form.submit();
+
+
+        }
+    </script>
+
+}

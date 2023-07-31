@@ -1,0 +1,14 @@
+.user-dashboard .dashboard-outer .content figure{
+    border:1px solid #8a8d9e;
+}
+.option-list li button{
+    width: 100px;
+    height: auto;
+    padding: 10px 0;
+}
+.option-list li .applyButton:hover{
+    background-color: #34a853;
+}
+.ls-widget .widget-content{
+    padding-top: 30px;
+}

@@ -1,0 +1,26 @@
+﻿
+
+
+<!-- Info Section -->
+<div class="login-section"style="background-color:gray;">
+    <div class="image-layer" style="background-image: url(images/background/12.jpg);"></div>
+        <!-- Login Form -->
+        <div class="login-form default-form" style="background-color:white ;padding:100px; border-radius:20px">
+        <!--Login Form-->
+                <form method="post" action="/Account/Login">
+                    <div class="form-group">
+                <label>Username</label>
+                <label class="pull-right" style="text-align:center;color:red;margin-left:50px;">@ViewBag.ErrorMessage</label>
+                <input type="text" name="username" placeholder="Username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <button class="theme-btn btn-style-one" type="submit" name="log-in">Giriş Yap</button>
+                    </div>
+                </form>
+
+                
+        <!--End Login Form -->
+    </div>
+</div>
+<!-- End Info Section -->

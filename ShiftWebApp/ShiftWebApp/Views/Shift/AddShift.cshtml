@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Vardiya Ekle";
+}
+@model Shift
+<div class="widget-title">
+    <a href="/Shift/Shifts"> <i class="las la-angle-left"></i></a>
+    <h4 style="text-align:center;">Vardiya Ekle</h4>
+    <div></div>
+</div>
+
+
+<div class="widget-content">
+
+    <form method="post" id="AddForm" class="default-form" action="/Shift/Add">
+        <div class="row">
+
+            <div class="form-group col-lg-6 col-md-12">
+                <label for="datetimeStart">Başlangıç saati</label>
+                <br />
+
+                <input type="datetime-local" id="datetimeStart" name="StartTime">
+            </div>
+
+            <div class="form-group col-lg-6 col-md-12">
+                <label for="datetimeEnd">Bitiş Saati saati</label>
+                <br />
+                <input type="datetime-local" id="datetimeEnd" name="EndTime">
+            </div>
+            <div class="form-group col-lg-6 col-md-12">
+                <label>Takımlar Listesi</label>
+                <select class="chosen-select" id="selectedTeamId" required>
+                    @foreach (var team in (List<Team>)ViewBag.Teams)
+                    {
+                        <option value="@team.Id">@team.TeamName</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group col-lg-6 col-md-12">
+                <label>Vardiya Türü</label>
+                <select class="chosen-select" id="selectedShifType" required>
+                    @foreach (var shiftType in (List<ShiftType>)ViewBag.ShiftTypes)
+                    {
+                        <option value="@shiftType.Id">@shiftType.Name</option>
+                    }
+                </select>
+            </div>
+            <!-- Input -->
+            <div class="form-group col-lg-12 col-md-12">
+                <a onclick="checkCheckBox()" class="theme-btn btn-style-one">Vardiya Oluştur</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section PersonelUpdateScripts {
+    <script>
+        // var data = [];
+        function checkCheckBox() {
+            var shiftTypeId = document.getElementById("selectedShifType").value;
+            var teamId = document.getElementById("selectedTeamId").value;
+            var form = document.getElementById("AddForm");
+            form.action = "/Shift/Add?shiftTypeId=" + shiftTypeId + "&teamId=" +teamId;
+            form.submit();
+
+
+        }
+
+    </script>
+}

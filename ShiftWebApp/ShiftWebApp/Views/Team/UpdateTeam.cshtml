@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Takım Güncelle";
+}
+@model Team
+<div class="widget-title">
+    <a href="/Personel/Personels"> <i class="las la-angle-left"></i></a>
+    <h4 style="text-align:center;">Seçilen Personeli Güncelle</h4>
+    <div></div>
+</div>
+
+
+<div class="widget-content">
+
+    <form method="post" id="UpdateForm" class="default-form" action="/Team/Update">
+        <div class="row">
+            <!-- Input -->
+            <div class="form-group col-lg-6 col-md-12">
+                <label>Takımın Adı</label>
+                <input type="text" name="TeamName" value="@Model.TeamName" required>
+            </div>
+            <input type="hidden" name="Id" value="@Model.Id" />
+            <div class="form-group col-lg-6 col-md-12">
+                <label>Takımın Lideri</label>
+                <select class="chosen-select" onchange="selectTitleId()" id="titleSelect">
+                    @foreach (var teamLeaderPersonel in (List<Personel>)ViewBag.TeamLeaderPersonels)
+                    {
+                        if (Model.TeamLeader.Id != teamLeaderPersonel.Id)
+                        {
+                            <option value="@teamLeaderPersonel.Id">@teamLeaderPersonel.FirstName @teamLeaderPersonel.LastName</option>
+                        }
+                        else
+                        {
+                            <option value="@teamLeaderPersonel.Id" selected>@teamLeaderPersonel.FirstName @teamLeaderPersonel.LastName</option>
+
+                        }
+                    }
+                </select>
+            </div>
+            <!-- Input -->
+            <div class="form-group col-lg-12 col-md-12">
+                <button type="submit" class="theme-btn btn-style-one">Güncelle</button>
+            </div> 
+        </div>
+    </form>
+</div>
+
+@section PersonelUpdateScripts {
+    <script>
+        function selectTitleId() {
+            var parameter = document.getElementById("titleSelect").value;
+            var form = document.getElementById("UpdateForm");
+            form.action = "/Team/Update?teamLeaderId=" + parameter;
+        }
+    </script>
+}

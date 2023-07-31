@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Takım Ekle";
+}
+@model Team
+<div class="widget-title">
+    <a href="/Personel/Personels"> <i class="las la-angle-left"></i></a>
+    <h4 style="text-align:center;">Takım Ekle</h4>
+    <div></div>
+</div>
+
+
+<div class="widget-content">
+
+    <form method="post" id="AddForm" class="default-form" action="/Team/Add">
+        <div class="row">
+            <!-- Input -->
+            <div class="form-group col-lg-6 col-md-12">
+                <label>Takımın Adı</label>
+                <input type="text" name="TeamName" required>
+            </div>
+            <div class="form-group col-lg-6 col-md-12">
+                <label>Takımın Lideri</label>
+                <select class="chosen-select"  >
+                    @foreach (var teamLeaderPersonel in (List<Personel>)ViewBag.NonTeamLeaders)
+                    {
+                        <option value="@teamLeaderPersonel.Id">@teamLeaderPersonel.FirstName @teamLeaderPersonel.LastName</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group col-lg-12 col-md-12">
+                <label>Personellerinizi Seçiniz:</label>
+                @foreach (var personel in (List<Personel>)ViewBag.NonTeamPersonels)
+                {
+                    <input type="checkbox" onchange="checkCheckBox(@personel.Id)" id="checkbox-@personel.Id" name="myCheckbox" value="@personel.Id">
+                    <label for="checkbox-@personel.Id" style="padding-right:20px;">@personel.FirstName @personel.LastName</label>
+                }
+            </div>
+            <!-- Input -->
+            <div class="form-group col-lg-12 col-md-12">
+                <a onclick="checkCheckBox()" class="theme-btn btn-style-one">Takım Ekle</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section PersonelUpdateScripts {
+    <script>
+        // var data = [];
+        function checkCheckBox() {
+            var checkboxes = document.querySelectorAll('input[name="myCheckbox"]:checked');
+            var selectedValues = [];
+            checkboxes.forEach(checkbox => {
+                selectedValues.push(checkbox.value);
+            });
+
+            var jsonData = JSON.stringify(selectedValues);
+
+            var form = document.getElementById("AddForm");
+            form.action = "/Team/Add"; 
+            var input = document.createElement("input");
+            input.type = "hidden";
+            input.name = "personelIds";
+            input.value = jsonData;
+            form.appendChild(input);
+
+            form.submit();
+        } 
+
+    </script>
+}

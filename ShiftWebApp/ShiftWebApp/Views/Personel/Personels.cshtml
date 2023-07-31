@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Personeller";
+}
+@model List<Personel>
+<div class="widget-title">
+    <h4>Personeller Listesi</h4>
+
+    <div class="chosen-outer">
+        <!--Tabs Box-->
+        <select class="chosen-select">
+            <option>Last 6 Months</option>
+            <option>Last 12 Months</option>
+            <option>Last 16 Months</option>
+            <option>Last 24 Months</option>
+            <option>Last 5 year</option>
+        </select>
+    </div>
+</div>
+
+<div class="widget-content">
+    <div class="table-outer">
+
+        <table class="default-table manage-job-table">
+            <thead>
+                <tr>
+                    <th>Adı</th>
+                    <th>Soyadı</th>
+                    <th>Yetkisi</th>
+                    <th>Aktif/Pasif</th>
+                    <th>Görüntüle/Güncelle/Sil</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var personel in Model)
+                {
+                    <tr>
+                        <td> @personel.FirstName </td>
+                        <td> @personel.LastName</td>
+                        <td> @personel.Title.Name </td>
+
+                        @if (personel.IsActive)
+                        {
+                            <td class="activeStatus">Aktif</td>
+                        }
+                        else
+                        {
+                            <td class="passiveStatus">Pasif</td>
+
+                        }
+                        <td>
+                            <div class="option-box">
+                                <ul class="option-list">
+                                    <li><a data-text="Görüntüle" href="/Personel/PersonelView?personelId=@personel.Id"><span class="la la-eye"></span></a></li>
+                                    <li><a data-text="Güncelle" href="/Personel/UpdatePersonel?personelId=@personel.Id"><span class="la la-pencil"></span></a></li>
+                                    @if (personel.IsActive)
+                                    {
+                                        <li><a data-text="Pasife Çek" href="/Personel/UpdatePassiveStatu?personelId=@personel.Id"><span class="la la-trash"></span></a></li>
+                                    }
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

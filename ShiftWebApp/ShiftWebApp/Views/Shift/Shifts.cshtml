@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Vardiyalar";
+}
+@model List<Shift>
+
+
+<div class="widget-title">
+    <h4>Vardiyalar Listesi</h4>
+    <div class="chosen-outer">
+        <!--Tabs Box-->
+        <a href="/Shift/AddShift" class="theme-btn btn-style-one"><span class="btn-title">Vardiya Ekle</span></a>
+    </div>
+</div>
+
+<div class="widget-content">
+    <div class="table-outer">
+
+        <table class="default-table manage-job-table">
+            <thead>
+                <tr>
+                    <th>Vardiya Id</th>
+                    <th>Vardiya Adı</th>
+                    <th>Vardiya Başlangıç Zamanı</th>
+                    <th>Vardiya Bitiş Zamanı</th>
+                    <th>Vardiya Durumu</th>
+                    <th>Görüntüle/Güncelle</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var shift in Model)
+                {
+                    <tr>
+                        <td> @shift.Id </td>
+                        <td> @shift.ShiftType.Name</td>
+                        <td> @shift.StartTime</td>
+                        <td> @shift.EndTime</td>
+                        <td> @shift.ShiftStatus.Name</td>
+                        <td>
+                            <div class="option-box">
+                                <ul class="option-list">
+                                    <li><a href="/Shift/ShiftView?shiftId=@shift.Id" data-text="Görüntüle"><span class="la la-eye"></span></a></li>
+                                    <li><a href="/Shift/UpdateShift?shiftId=@shift.Id" data-text="Güncelle"><span class="la la-pencil"></span></a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div> 
+

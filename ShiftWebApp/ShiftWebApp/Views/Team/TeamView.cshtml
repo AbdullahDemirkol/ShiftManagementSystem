@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Seçilen Takım Bilgileri";
+}
+@model Team
+<div class="widget-title">
+    <a href="/Team/Teams"> <i class="las la-angle-left"></i></a>
+    <h4 style="text-align:center;">Seçilen Personel Bilgisi</h4>
+    <div></div>
+</div>
+
+<div class="widget-content">
+    <div class="sidebar-widget company-widget">
+        <div class="widget-content">
+            <ul class="company-info mt-0">
+                <li>Takım Id: <span>@Model.Id</span></li>
+                <li>Takım Adı: <span>@Model.TeamName</span></li>
+                <li>Takımın Çalışan Sayısı: <span>@ViewBag.TeamPersonelCount</span></li>
+                <li>Takım Lideri Adı Soyadı: <span>@Model.TeamLeader.FirstName @Model.TeamLeader.LastName </span></li>
+                <li>Takım Lideri Telefon Numarası: <span>@Model.TeamLeader.Phone</span></li>
+                <li>Takım Lideri Email Adresi : <span>@Model.TeamLeader.Email</span></li>
+            </ul>
+
+            <div class="btn-box"><a href="/Team/UpdateTeam?teamId=@Model.Id" class="theme-btn btn-style-three">Takım Bilgisini Güncelle</a></div>
+        </div>
+
+        <table class="default-table manage-job-table" style="border:1px solid black">
+            <thead>
+                <tr>
+                    <th>Adı</th>
+                    <th>Soyadı</th>
+                    <th>Yetkisi</th>
+                    <th>Aktif/Pasif</th>
+                    <th>Görüntüle/Güncelle/Değiştir/Sil</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var personel in ViewBag.PersonelList)
+                {
+                    <tr>
+                        <td> @personel.FirstName </td>
+                        <td> @personel.LastName</td>
+                        <td> @personel.Title.Name </td>
+
+                        @if (personel.IsActive)
+                        {
+                            <td class="activeStatus">Aktif</td>
+                        }
+                        else
+                        {
+                            <td class="passiveStatus">Pasif</td>
+
+                        }
+                        <td>
+                            <div class="option-box">
+                                <ul class="option-list">
+                                    <li><a data-text="Görüntüle" href="/Personel/PersonelView?personelId=@personel.Id"><span class="la la-eye"></span></a></li>
+                                    <li><a data-text="Güncelle" href="/Personel/UpdatePersonel?personelId=@personel.Id"><span class="la la-pencil"></span></a></li>
+                                    <li><a data-text="Çalışanı Değiştir" href="/Personel/ChangePersonel?settingsId=1&personelId=@personel.Id"><span class="las la-sync"></span></a></li>
+                                    @if (personel.IsActive)
+                                    {
+                                        <li><a data-text="Pasife Çek" href="/Personel/UpdatePassiveStatu?personelId=@personel.Id"><span class="la la-trash"></span></a></li>
+                                    }
+                                </ul>
+                            </div>
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Takımlar";
+}
+@model List<Team>
+
+<div class="widget-title">
+    <h4>Takımlar Listesi</h4>
+
+    <div class="chosen-outer">
+        <!--Tabs Box-->
+        <a href="/Team/AddTeam" class="theme-btn btn-style-one"><span class="btn-title">Takım Ekle</span></a>
+        
+    </div>
+</div>
+
+<div class="widget-content">
+    <div class="table-outer">
+        <table class="default-table manage-job-table">
+            <thead>
+                <tr>
+                    <th>Takım Id</th>
+                    <th>Takım Adı</th>
+                    <th>Takım Lideri Adı Soyadı</th>
+                    <th>Takım Lideri Numarası</th>
+                    <th>Görüntüle/Güncelle</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var team in Model)
+                {
+                    <tr>
+                        <td> @team.Id </td>
+                        <td> @team.TeamName</td>
+                        <td> @team.TeamLeader.FirstName @team.TeamLeader.LastName</td>
+                        <td> @team.TeamLeader.Phone</td>
+                        <td>
+                            <div class="option-box">
+                                <ul class="option-list">
+                                    <li><a href="/Team/TeamView?teamId=@team.Id" data-text="Görüntüle"><span class="la la-eye"></span></a></li>
+                                    <li><a href="/Team/UpdateTeam?teamId=@team.Id" data-text="Güncelle"><span class="la la-pencil"></span></a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

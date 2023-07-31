@@ -1,0 +1,106 @@
+﻿@{
+    ViewData["Title"] = "Personel Güncelle";
+}
+@model Personel
+<div class="widget-title">
+    <a href="/Personel/Personels"> <i class="las la-angle-left"></i></a>
+    <h4 style="text-align:center;">Seçilen Personeli Güncelle</h4>
+    <div></div>
+</div>
+
+
+<div class="widget-content">
+
+    <form method="post" id="UpdateForm" class="default-form" action="/Personel/Update">
+        <div class="row">
+            <!-- Input -->
+            <div class="form-group col-lg-6 col-md-12">
+                <label>Personelin Adı</label>
+                <input type="text" name="FirstName" value="@Model.FirstName" required>
+            </div>
+
+            <!-- Input -->
+            <div class="form-group col-lg-6 col-md-12">
+                <label>Personelin Soyadı</label>
+                <input type="text" name="LastName" value="@Model.LastName" required>
+            </div>
+
+            <!-- Input -->
+            <div class="form-group col-lg-4 col-md-12">
+                <label>Personelin Kullanıcı Adı</label>
+                <input type="text" name="UserName" value="@Model.UserName" required>
+            </div>
+
+            <!-- Input -->
+            <div class="form-group col-lg-4 col-md-12">
+                <label>Personelin Telefon Numarası</label>
+                <input type="text" name="Phone" value="@Model.Phone" required>
+            </div>
+
+            <!-- Input -->
+            <div class="form-group col-lg-4 col-md-12">
+                <label>Personelin Email Adresi Bilgisi</label>
+                <input type="text" name="Email" value="@Model.Email" required>
+            </div>
+
+            <!-- Input -->
+            <div class="form-group col-lg-12 col-md-12">
+                <label>Personelin Adres Bilgisi</label>
+                <input type="text" name="Address" value="@Model.Address" required>
+            </div>
+            <input type="hidden" name="Id" value="@Model.Id" />
+            <input type="hidden" id="selectedTitleId" name="Title" value="@Model.Title.Id" />
+            <!-- Input -->
+            <div class="form-group col-lg-6 col-md-12">
+                <label>Yetki Düzeyi</label>
+                <select class="chosen-select" onchange="selectTitleId()" id="titleSelect">
+                    @foreach (var titleType in (List<TitleType>)ViewBag.TitleTypes)
+                    {
+                        if (Model.Title.Id!=titleType.Id)
+                        {
+                            <option value="@titleType.Id">@titleType.Name</option>
+                        }
+                        else
+                        {
+                            <option value="@titleType.Id" selected>@titleType.Name</option>
+
+                        }
+                    }
+                </select>
+            </div>
+
+            <!-- Input -->
+            <div class="form-group col-lg-6 col-md-12">
+                <label>Aktif/Pasif</label>
+                <select class="chosen-select" name="IsActive">
+                    @if (Model.IsActive)
+                    {
+                        <option value="true" selected>Aktif</option>
+                        <option value="false">Pasif</option>
+                    }
+                    else
+                    {
+
+                        <option value="true">Aktif</option>
+                        <option value="false" selected>Pasif</option>
+                    }
+                </select>
+            </div>
+
+            <!-- Input -->
+            <div class="form-group col-lg-12 col-md-12">
+                <button type="submit" class="theme-btn btn-style-one">Güncelle</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section PersonelUpdateScripts {
+    <script>
+        function selectTitleId() {
+            var parameter = document.getElementById("titleSelect").value;
+            var form = document.getElementById("UpdateForm");
+            form.action = "/Personel/Update?titleId=" + parameter;
+        }
+    </script>
+}
