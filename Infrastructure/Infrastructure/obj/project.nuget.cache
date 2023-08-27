@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sYFNJuFCt+T4hLI0w/QqZaB7lzN+0tLJ6114haKkrMGX8RTIlohX0X2Lb+8bNCKgrzWCYYGyr+DJOtqUGE/0Kw==",
+  "dgSpecHash": "9WM10rGk2utAZyj0bNw+/6xazO3lf3aNiwyIJMA4Ylo534Cl46FakxnVNF64zU7ZxVRo6rIJ3IMBBFJ+pym3BA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Abdullah\\source\\repos\\ShiftManagement\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Abdullah\\Desktop\\Yeni klasör (3)\\ShiftManagementSystem\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Abdullah\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Abdullah\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -5,6 +5,7 @@ using Infrastructure.Context;
 using Infrastructure.Repository;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace ShiftWebApp.Controllers
 {
@@ -45,18 +46,25 @@ namespace ShiftWebApp.Controllers
             personels.Remove(registeredPersonel);
             teamPersonels.Remove(registeredTeamPersonels);
             var nonTeamPersonels = new List<Personel>();
+            var personelsWithTeam = new List<Personel>();
             foreach (var personel in personels)
             {
-                if (!teamPersonels.Any(p => p.PersonelId == personel.Id) && personel.Title.Id == TitleType.Employee.Id)
+                if (personel.Title.Id == TitleType.Employee.Id)
                 {
-                    nonTeamPersonels.Add(personel);
+                    if (teamPersonels.Any(p => p.PersonelId == personel.Id))
+                    {
+                        personelsWithTeam.Add(personel);
+                    }
+                    else
+                    {
+                        nonTeamPersonels.Add(personel);
+                    }
                 }
             }
             foreach (var nonTeamPersonel in nonTeamPersonels)
             {
                 personels.Remove(nonTeamPersonel);
             }
-            var personelsWithTeam = personels;
             ViewBag.PersonelsWithTeam = personelsWithTeam;
             ViewBag.NonTeamPersonels= nonTeamPersonels;
             ViewBag.RegisteredPersonel= registeredPersonel;
@@ -66,6 +74,7 @@ namespace ShiftWebApp.Controllers
         {
             var teamPersonels = await _teamPersonelsRepository.Get(p => p.PersonelId == firstPersonelId || p.PersonelId == secondPersonelId);
             var firstPersonel = teamPersonels.FirstOrDefault(p => p.PersonelId == firstPersonelId);
+            var p = _personelRepository.Get(p => p.Id== firstPersonelId);
             if (settingsId==1)
             {
                 var secondPersonel = teamPersonels.FirstOrDefault(p => p.PersonelId == secondPersonelId);

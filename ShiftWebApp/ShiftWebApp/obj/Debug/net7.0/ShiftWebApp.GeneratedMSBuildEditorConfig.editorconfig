@@ -9,101 +9,101 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ShiftWebApp
 build_property.RootNamespace = ShiftWebApp
-build_property.ProjectDir = C:\Users\Abdullah\source\repos\ShiftManagement\ShiftWebApp\ShiftWebApp\
+build_property.ProjectDir = C:\Users\Abdullah\Desktop\Yeni klasör (3)\ShiftManagementSystem\ShiftWebApp\ShiftWebApp\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Abdullah\source\repos\ShiftManagement\ShiftWebApp\ShiftWebApp
+build_property.MSBuildProjectDirectory = C:\Users\Abdullah\Desktop\Yeni klasör (3)\ShiftManagementSystem\ShiftWebApp\ShiftWebApp
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/Account/Login.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/Home/Index.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/Home/Privacy.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/Personel/ChangePersonel.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/Personel/ChangePersonel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uZWxcQ2hhbmdlUGVyc29uZWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/Personel/Personels.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/Personel/Personels.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uZWxcUGVyc29uZWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/Personel/PersonelView.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/Personel/PersonelView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uZWxcUGVyc29uZWxWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/Personel/UpdatePersonel.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/Personel/UpdatePersonel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uZWxcVXBkYXRlUGVyc29uZWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/Shared/Error.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/Shared/_Footer.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/Shared/_Footer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/Shared/_Navbar.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/Shared/_Navbar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZiYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/Shared/_SideBar.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/Shared/_SideBar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaWRlQmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/Shift/AddShift.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/Shift/AddShift.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpZnRcQWRkU2hpZnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/Shift/Shifts.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/Shift/Shifts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpZnRcU2hpZnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/Shift/ShiftView.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/Shift/ShiftView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpZnRcU2hpZnRWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/Shift/UpdateShift.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/Shift/UpdateShift.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpZnRcVXBkYXRlU2hpZnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/Team/AddTeam.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/Team/AddTeam.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxBZGRUZWFtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/Team/Teams.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/Team/Teams.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxUZWFtcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/Team/TeamView.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/Team/TeamView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxUZWFtVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/Team/UpdateTeam.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/Team/UpdateTeam.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxVcGRhdGVUZWFtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/_ViewImports.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/_ViewStart.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Abdullah/source/repos/ShiftManagement/ShiftWebApp/ShiftWebApp/Views/Shared/_Layout.cshtml]
+[C:/Users/Abdullah/Desktop/Yeni klasör (3)/ShiftManagementSystem/ShiftWebApp/ShiftWebApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-eit63dt62m

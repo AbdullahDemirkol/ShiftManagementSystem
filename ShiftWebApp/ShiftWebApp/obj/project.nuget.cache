@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "esxMOy6ILy1PjPhjobIUkaayAjwVpZE6pU3qBfxzWqqp+acGUe5yzfR191pRpdH7gDvn/GqzAb2cTNleq9VFuQ==",
+  "dgSpecHash": "0SlwJ1Z0dKr/Ts+DyVUpQShpCYNTj+SkzSxFhB8X0Gw6mqYI2GQSeHIjzERJPaa3CrV4A9neKD0ICC8G6fQhCw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Abdullah\\source\\repos\\ShiftManagement\\ShiftWebApp\\ShiftWebApp\\ShiftWebApp.csproj",
+  "projectFilePath": "C:\\Users\\Abdullah\\Desktop\\Yeni klasör (3)\\ShiftManagementSystem\\ShiftWebApp\\ShiftWebApp\\ShiftWebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Abdullah\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Abdullah\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
